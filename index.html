@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>3D 2048</title>
+	<link rel="stylesheet" href="css/index.css">
+	<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+	<script src="js/index.js"></script>
+</head>
+<body>
+<h1>3D2048</h1>
+<h3>小键盘控制方块滑动方向,<br/>或点击游戏界面右下角方向键</h3>
+<div id="mian-tz">
+	<div id="mian-tz-fs" class="ulli">
+		<ul class="ul2 tion1 ">
+			<li class="li_2 li21"></li>
+			<li class="li_2 li22"></li>
+			<li class="li_2 li23"></li>
+			<li class="li_2 li24"></li>
+			<li class="li_2 li25"></li>
+			<li class="li_2 li26" id="scoretxt">score:</li>
+		</ul>
+	</div>
+
+	<div id="mian-tz-fzz" class="ulli">
+		<ul class="ul2 tion1 ">
+			<li class="li_2 li21"></li>
+			<li class="li_2 li22"></li>
+			<li class="li_2 li23"></li>
+			<li class="li_2 li24"></li>
+			<li class="li_2 li25"></li>
+			<li id="score" class="li_2 li26">0</li>
+		</ul>
+	</div>
+
+	<div id="mian-tz-wf" class="ulli" >
+		<ul class="ul2 tion1 " id="wfjs">
+			<li class="li_2 li21"></li>
+			<li class="li_2 li22"></li>
+			<li class="li_2 li23"></li>
+			<li class="li_2 li24"></li>
+			<li class="li_2 li25"></li>
+			<li class="li_2 li26">玩法介绍</li>
+		</ul>
+	</div>
+
+	<div id="mian-tz-ff" class="ulli">
+		<ul class="ul2 tion1 " id="reset">
+			<li class="li_2 li21"></li>
+			<li class="li_2 li22"></li>
+			<li class="li_2 li23"></li>
+			<li class="li_2 li24"></li>
+			<li class="li_2 li25"></li>
+			<li class="li_2 li26" >reset</li>
+		</ul>
+	</div>
+	<ul class="ul-wf tion1" id="wf_js">
+		<li class="li-wf liwf1"></li>
+		<li class="li-wf liwf2"></li>
+		<li class="li-wf liwf3"></li>
+		<li class="li-wf liwf4"></li>
+		<li class="li-wf liwf5"></li>
+		<li class="li-wf liwf6" >小键盘方向键控制小方块的滑动方向，每滑动一次随机增加一个数字为2或4的方块，当滑向某个方向，令两个相同数字的方块相撞时，两个方块合为一个方块，方块数字相加，得分为数字相加的分数。<br/>例如:
+		两个数字为2的小方块相撞，两个方块合为一个数字为4的方块，分数加4，其他原理相同。<br/>
+
+		</li>
+	</ul>
+	<div id="mian-tz-sz"></div>
+	<div id="my_tblr"></div>
+</div>
+</body>
+</html>
