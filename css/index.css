@@ -2,6 +2,7 @@
   font-family: Microsoft Yahei;
   padding: 0;
   margin: 0;
+  user-select: none;
 }
 img {
   border: 0;
@@ -12,7 +13,23 @@ li {
 body {
   background-color: #f5deb3;
 }
+.header {
+  position: relative;
+  width: 700px;
+  margin: 30px auto 0;
+  display: flex;
+  flex-direction: row;
+}
+.header .title {
+  float: left;
+}
 .tion1 {
+  transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease; /* Firefox 4 */
+  -webkit-transition: all 0.5s ease; /* Safari 和 Chrome */
+  -o-transition: all 0.5s ease; /* Opera */
+}
+.tion1 * {
   transition: all 0.5s ease;
   -moz-transition: all 0.5s ease; /* Firefox 4 */
   -webkit-transition: all 0.5s ease; /* Safari 和 Chrome */
@@ -75,19 +92,23 @@ body {
 } /*这是正面*/
 #mian-tz {
   position: absolute;
-  top: 8%;
+  top: 130px;
   left: 42%;
   margin-left: -250px;
   width: 400px;
 }
 #mian-tz-wf {
+  cursor: pointer;
+  z-index: 1;
   position: absolute;
-  left: 115%;
+  left: 116%;
   top: 8px;
   height: 70px;
   width: 150px;
 }
 #mian-tz-fs {
+  cursor: pointer;
+  z-index: 4;
   position: absolute;
   left: 50%;
   top: 8px;
@@ -96,6 +117,8 @@ body {
   width: 150px;
 }
 #mian-tz-fzz {
+  cursor: pointer;
+  z-index: 3;
   position: absolute;
   left: 88.5%;
   top: 8px;
@@ -104,6 +127,8 @@ body {
   width: 150px;
 }
 #mian-tz-ff {
+  cursor: pointer;
+  z-index: 2;
   position: absolute;
   left: 127%;
   top: 8px;
@@ -276,23 +301,27 @@ body {
 .pos1 {
   left: 0px;
   top: 0px;
+  z-index: 4;
 } /* 上下左右位置 */
 .pos2 {
   left: 0px;
+  z-index: 2;
   top: 50px;
 }
 .pos3 {
   left: -50px;
   top: 50px;
+  z-index: 3;
 }
 .pos4 {
   left: 50px;
   top: 50px;
+  z-index: 1;
 }
 /* 玩法介绍 */
 .ul-wf {
-  opacity: 0;
-  height: 200px;
+  /* opacity: 0; */
+  height: 220px;
   width: 390px;
   position: absolute;
   left: 127%;
@@ -302,6 +331,9 @@ body {
   transform-style: preserve-3d;
   -webkit-transform: rotateX(-8deg) rotateY(8deg) translateZ(-130px);
   transform: rotateX(-8deg) rotateY(8deg) translateZ(-130px);
+}
+.ul-wf li {
+  opacity: 0;
 }
 .li-wf {
   width: inherit;
@@ -347,3 +379,60 @@ body {
   -webkit-transform: translateZ(50px);
   transform: translateZ(50px);
 } /*这是正面*/
+
+/* github */
+
+#github {
+  position: absolute;
+  left: 515px;
+  cursor: pointer;
+  height: 100px;
+  width: 100px;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform: rotateX(-8deg) rotateY(8deg);
+  transform: rotateX(-8deg) rotateY(8deg);
+}
+#github:hover {
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform: rotateX(-8deg) rotateY(188deg);
+  transform: rotateX(-8deg) rotateY(188deg);
+}
+#github img {
+  width: 70px;
+}
+#github > :nth-child(1) {
+  -webkit-transform: rotateX(90deg) translateZ(50px);
+  transform: rotateX(90deg) translateZ(50px);
+}
+#github > :nth-child(2) {
+  -webkit-transform: rotateX(270deg) translateZ(50px);
+  transform: rotateX(270deg) translateZ(50px);
+}
+#github > :nth-child(3) {
+  -webkit-transform: rotateY(90deg) translateZ(50px);
+  transform: rotateY(90deg) translateZ(50px);
+}
+#github > :nth-child(4) {
+  -webkit-transform: rotateY(270deg) translateZ(50px);
+  transform: rotateY(270deg) translateZ(50px);
+}
+#github > :nth-child(5) {
+  -webkit-transform: translateZ(-50px);
+  transform: translateZ(-50px);
+}
+#github > :nth-child(6) {
+  -webkit-transform: translateZ(50px);
+  transform: translateZ(50px);
+}
+#github > :nth-child(5),
+#github > :nth-child(6) {
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#github .reverse {
+  transform: rotateY(180deg);
+}
